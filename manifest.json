@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Volume Booster",
+  "version": "0.1",
+  "permissions": [
+    "tabCapture",
+    "activeTab"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "icons": {
+    "128": "sound.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "128": "sound.png"
+    },
+    "default_title": "Volume Booster",
+    "default_popup": "popup.html"
+  }
+}

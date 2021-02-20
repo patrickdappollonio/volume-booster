@@ -1,0 +1,90 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 6px 10px 0 10px;
+    }
+
+    .row {
+      position: relative;
+      width: 280px;
+      height: 20px;
+    }
+
+    .column {
+      position: absolute;
+    }
+
+    .column.left {
+      top: 0;
+      left: 0;
+    }
+
+    .column.right {
+      top: 0;
+      right: 0;
+    }
+
+    .column.middle {
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 0 30px 0 26px;
+    }
+
+    svg {
+      display: inline-block;
+      vertical-align: bottom;
+      width: 16px;
+      height: 16px;
+      margin: 0 5px;
+      opacity: 0.8;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      height: 10px;
+      border-radius: 5px;
+      background-image: linear-gradient(to right, rgb(0, 255, 0), rgb(255, 0, 0));
+      outline: none;
+      opacity: 0.7;
+      -webkit-appearance: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="row">
+    <div class="column left">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path
+          d="M272 0h-48L80 160H32c-17.672 0-32 14.326-32 32v128c0 17.672 14.328 32 32 32h48l144 160h48c8.836 0 16-7.164 16-16V16c0-8.836-7.164-16-16-16zM480 224H352c-17.672 0-32 14.328-32 32s14.328 32 32 32h128c17.672 0 32-14.328 32-32s-14.328-32-32-32z" />
+      </svg>
+    </div>
+    <div class="column middle">
+      <input id="slide" type="range" min="0" max="10" step="1" value="2" type="range">
+    </div>
+    <div class="column right">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path
+          d="M272 0h-48L80 160H32c-17.672 0-32 14.326-32 32v128c0 17.672 14.328 32 32 32h48l144 160h48c8.836 0 16-7.164 16-16V16c0-8.836-7.164-16-16-16zM480 224h-32v-32c0-17.672-14.328-32-32-32s-32 14.328-32 32v32h-32c-17.672 0-32 14.328-32 32s14.328 32 32 32h32v32c0 17.672 14.328 32 32 32s32-14.328 32-32v-32h32c17.672 0 32-14.328 32-32s-14.328-32-32-32z" />
+      </svg>
+    </div>
+  </div>
+
+  <p align="center">
+    <button id="button">Disable volume boost</button>
+  </p>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
